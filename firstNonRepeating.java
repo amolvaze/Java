@@ -20,7 +20,7 @@ class Main {
      return '_';
   }
 
-  // O(2n) ~ O(n) linear time solution using hasmap
+  // O(2n) ~ O(n) linear time solution using hashmap
 
   public static char firstNonRepating(String s) {
     //System.out.println(s);
