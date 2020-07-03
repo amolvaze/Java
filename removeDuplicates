@@ -1,0 +1,27 @@
+// Code develped by Amol Vaze
+
+import java.util.*;
+
+// code to remove duplicates from a given sorted array.
+
+class Main {
+  public static void removeDuplicates(int[] nums) {
+        if (nums.length == 0) {
+        System.out.println("Input array is empty:- ");
+        return;
+        }
+        
+        Set<Integer> numset = new HashSet<>();
+        for(int i:nums){
+            numset.add(i);
+        }
+        //return numset.size();
+    for(int result : numset){
+   System.out.println(result);
+}
+    }
+  public static void main(String[] args) {
+    int[] arr ={1,1,3,5,6,6,8,8,8,67,566};
+    removeDuplicates(arr);
+  }
+}
