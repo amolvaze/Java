@@ -53,6 +53,17 @@ if(s.indexOf(s.charAt(i)) == s.lastIndexOf(s.charAt(i))){
 }
  return '_';
 }
+  
+  // When asked to return an index of first non repeating character then following is the change to above function.
+//   public static int firstNonRepating2(String s) {
+// for(int i=0; i< s.length(); i++) {
+// if(s.indexOf(s.charAt(i)) == s.lastIndexOf(s.charAt(i))){
+//     //return s.charAt(i);.
+//      return i;
+// }  
+// }
+//  return -1;
+// }
 
   public static void main(String[] args) {
     String s = "aaabccccdddf";
