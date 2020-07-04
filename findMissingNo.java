@@ -5,7 +5,6 @@ import java.util.*;
 
 class Main {
   public static int findMissing(int[] a) {
-  // to find the a.p of all integers from 0 to no
   // using xor approach in O(n) time
   int missingNo =  a.length;
   for(int i= 0; i< a.length; i++){
