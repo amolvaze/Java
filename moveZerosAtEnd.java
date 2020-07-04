@@ -1,35 +1,26 @@
 import java.util.*;
 
-// code to move all the zeros to end of array
-
-// O(3n) ~ O(n) linear time
-
+// code to move zeros at end in O(n) time
 class Main {
-  public static void moveZeroAtEnd(int[] a) {
-   
-   // initialize k to zero
-   int k= 0;
-   // loop through a given array to check if there is nonzero 
-   for(int i : a){
-      
-      if(i!=0){
-        a[k++] = i; // both operations in single statement.
-        //a[k] = i;
-         //k++;
-      }
+   public static void moveZeros(int[] a){
+     int index = 0;
+     for(int i=0; i< a.length; i++){
+        if(a[i] != 0){
+          a[index++] = a[i];
+        }
+     }
+ 
+   for(int i = index; i< a.length; i++) {
+       a[i] =0;
+   }
 
    }
-// now to move all zeros at the end
-for(int i=k; i < a.length; i++){
-  a[i] = 0;
-}
 
-  }
   public static void main(String[] args) {
-    int[] arr = {1,45,0,56,0, 4,44,0,100,0, 77, 5};
-    moveZeroAtEnd(arr);
-    System.out.println(Arrays.toString(arr));
+    int arr[] = {0, 1, 0, 3, 4, 0, 5, 5, 0, 0, 0, 8, 7};
+    moveZeros(arr);
+    for(int i=0; i< arr.length; i++) {
+    System.out.println(arr[i]);  
+    }
   }
 }
-
-//1,45,45.4,44,100,77,5,
