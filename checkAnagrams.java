@@ -1,5 +1,5 @@
 import java.util.*;
-// code to check if one string is anagram of other
+// code to check if one string is anagram of other - O(n log n) solution. 
 class Main {
    public static boolean checkAnagram(String s, String t){
       // find length of both the strings
