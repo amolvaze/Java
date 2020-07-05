@@ -4,7 +4,8 @@ import java.util.*;
 class Main {
 public static void findIntersection(int[] nums1, int[] nums2) {
   
-  if(nums1.length == 0 || nums2.length == 0) {
+  if(nums1.length == 0 || nums2.length == 0 || nums1 == null || nums2 == null)  {
+    System.out.println("Input array is empty: ");
     return;
   } 
 // put nums1 content to map
