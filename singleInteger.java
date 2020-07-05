@@ -24,7 +24,7 @@ return -1;
   }
   
   // Using xOR approach for this code
-  public static int singleNumber(int[] nums) {
+  public static int singleInteger(int[] nums) {
     int a = 0;
     for (int i : nums) {
       a ^= i;
