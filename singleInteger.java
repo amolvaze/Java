@@ -22,6 +22,16 @@ class Main {
   }
 return -1;
   }
+  
+  // Using xOR approach for this code
+  public static int singleNumber(int[] nums) {
+    int a = 0;
+    for (int i : nums) {
+      a ^= i;
+    }
+    return a;
+  }
+  
   public static void main(String[] args) {
     //int[] arr = {2,2,1};
     int[] arr = {4,1,2,1};
