@@ -4,7 +4,7 @@ class Main {
   public static String longestCommonPrefix(String[] strs) {
       if(strs.length == 0) {
          System.out.println("Input is empty!");
-         return " ";
+         return "";
       }
        String prefix = strs[0];
        for(int i=1 ; i< strs.length; i++) {
