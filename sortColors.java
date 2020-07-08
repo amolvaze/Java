@@ -8,7 +8,7 @@ class Main {
   // function to sort colors
  public static void sortColors(int[] a) {
     if(a.length == 0 || a.length == 1){
-    System.out.println("Input array is empty. ");
+    System.out.println("Invalid input. ");
     return;
     }
     int start = 0;
