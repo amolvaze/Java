@@ -1,6 +1,5 @@
 import java.util.*;
-// code to return longest common substring.
-
+// code to return group anagrams.
 // Both time and space complity = O(nk) where n is the length of strs and k is the max length of strs in a string.
 //  Counting each string is linear in the size of the string, and we count every string.
 class Main {
