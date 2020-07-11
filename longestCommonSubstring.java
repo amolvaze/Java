@@ -1,5 +1,12 @@
-class Solution {
-    public String longestPalindrome(String s) {
+import java.util.*;
+// code to return longest common substring.
+
+// Brute Force Time Complexity  - O(n^3)
+
+// Following code time complexity - O(n^2)
+
+class Main {
+    public static String longestPalindrome(String s) {
         
     if(s == null || s.length() < 1) return " ";
     int start = 0;
@@ -18,7 +25,7 @@ class Solution {
         
     }
     
-    public int expandFromMiddle(String s, int left, int right) {
+    public static int expandFromMiddle(String s, int left, int right) {
          
        if( s== null || left > right) return 0;
    
@@ -31,5 +38,11 @@ class Solution {
         return right-left-1;
         
     }  
+
+    public static void main(String[] args) {
+   // String str = "babad";
+    String str = "cbbd";
+    System.out.println(longestPalindrome(str));
+  }
     
 }
