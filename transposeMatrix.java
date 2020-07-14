@@ -10,8 +10,8 @@ class Solution {
         int columns = A[0].length;
         int[][] resultMatrix = new int[columns][rows];
         // loop through input given matrix
-        for(int i=0; i< A.length; i++) {
-            for(int j=0; j< A.length; j++) 
+        for(int i=0; i< rows; i++) {
+            for(int j=0; j< columns; j++) 
             {
                 resultMatrix[j][i] = A[i][j];
             }
@@ -33,8 +33,8 @@ class Main {
   int columns = A[0].length;
   int[][] resultArray = new int[columns][rows];
   // Loop thru given input array matrix
-  for(int i=0; i< A.length; i++) 
-  {   for(int j=0; j< A.length; j++) 
+  for(int i=0; i< rows; i++) 
+  {   for(int j=0; j< columns; j++) 
          {
             resultArray[j][i] = A[i][j];
          }  
