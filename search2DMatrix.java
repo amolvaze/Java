@@ -1,6 +1,6 @@
 import java.util.*;
 
-// code to search in sorted 2D array
+// code to search in sorted 2D array - using binary search - log n time complexity.
 
 class Main {
   public static boolean searchMatrix(int[][] matrix, int target) {
