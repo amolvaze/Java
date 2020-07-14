@@ -20,3 +20,39 @@ class Solution {
         
     }
 }
+//------------------------------------------------Using Void method----------------------------------
+
+import java.util.*;
+// code to return transpose of given matrix.
+// constraints
+//1 <= A.length <= 1000
+//1 <= A[0].length <= 1000
+class Main {
+ public static void transpose(int[][] A) {
+  int rows = A.length;
+  int columns = A[0].length;
+  int[][] resultArray = new int[columns][rows];
+  // Loop thru given input array matrix
+  for(int i=0; i< A.length; i++) 
+  {   for(int j=0; j< A.length; j++) 
+         {
+            resultArray[j][i] = A[i][j];
+         }  
+  }
+
+  for (int i = 0; i < resultArray.length; ++i) {
+      for(int j = 0; j < resultArray[i].length; ++j) {
+        System.out.println(resultArray[i][j]);
+      }
+  }
+ }
+
+  public static void main(String[] args) {
+    int[][] arr = {
+                 {1,2,3},{4,5,6},{7,8,9}
+    };
+
+   transpose(arr);
+
+  }
+}
