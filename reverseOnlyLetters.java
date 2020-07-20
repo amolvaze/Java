@@ -4,7 +4,7 @@ import java.util.*;
 
 // Used 2 approaches - Using a stack and another using a counter.
 class Solution {
-//     public String reverseOnlyLetters(String S) {
+//     public static String reverseOnlyLetters(String S) {
 //         // Stack approach
 //         Stack<Character> stack = new Stack();
         
@@ -32,7 +32,7 @@ class Solution {
 //     }
     
     // Another approch using counter
-     public String reverseOnlyLetters(String S) {
+     public static String reverseOnlyLetters(String S) {
         
          StringBuilder sb = new StringBuilder();
          int j=S.length()-1;
@@ -54,5 +54,12 @@ class Solution {
          
          return sb.toString();
      }
+        
+      public static void main(String[] args) {
+    String str = "ab-cd";
+   // String str = "a-bC-dEf-ghIj";
+    //String str = "Test1ng-Leet=code-Q!";
+    System.out.println(reverseOnlyLetters(str));
+  }
        
 }
