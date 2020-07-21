@@ -1,3 +1,16 @@
+// Input: nums = [1,2,3]
+// Output:
+// [
+//   [3],
+//   [1],
+//   [2],
+//   [1,2,3],
+//   [1,3],
+//   [2,3],
+//   [1,2],
+//   []
+// ]
+
 import java.util.*;
 // code to return subsets of nos
 class Solution {
