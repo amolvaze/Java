@@ -2,7 +2,7 @@ import java.util.*;
 
 // Code to return k merge sorted list
 
-// Time complexity - O(n log k)
+// Time complexity - O(nk)
 
 //Input:
 //[
