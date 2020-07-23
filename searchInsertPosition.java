@@ -8,17 +8,19 @@ import java.util.*;
 //Output: 2
 //Example 2:
 
-//Ex-2
-Input: [1,3,5,6], 2
-Output: 1
-Example 3:
+//Example-2
+// Input: [1,3,5,6], 2
+// Output: 1
+// Example 3:
 
-Input: [1,3,5,6], 7
-Output: 4
-Example 4:
+// Example-3
+// Input: [1,3,5,6], 7
+// Output: 4
+// Example 4:
 
-Input: [1,3,5,6], 0
-Output: 0
+//Example-4
+// Input: [1,3,5,6], 0
+// Output: 0
 
 class Main {
    public static int searchInsert(int[] nums, int target) {
