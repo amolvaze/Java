@@ -58,6 +58,8 @@ System.out.println(maximalSquare(arr));
   
 // Another array which stores elements in a row is used for dp.
 
+// This will need O(n) space.
+
   class Solution {
     public int maximalSquare(char[][] matrix) {
         if(matrix.length == 0)
