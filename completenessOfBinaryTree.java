@@ -2,7 +2,11 @@ import java.util.*;
 // Code to check completeness of binary tree.
 // Time and space complexity - O(n)
  // Definition for a binary tree node.
-  static class TreeNode {
+
+//When level-order traversal in a complete tree, after the last node, all nodes in the queue should be null.
+//Otherwise, the tree is not complete.  
+
+static class TreeNode {
     int val;
     TreeNode left;
      TreeNode right;
