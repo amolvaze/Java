@@ -1,7 +1,7 @@
 import java.util.*;
 // Code for backspaxe string compare using a Stack Approach
 
-// Time and Space Complexity - O(n)
+// Time and Space Complexity - O(M+N)
 
 
 class Main {
