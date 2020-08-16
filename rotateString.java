@@ -1,7 +1,7 @@
 import java.util.*;
 
 // code to rotate String
-// Time Complexity - O(N^2)
+// Time Complexity - O(N) - O(N1 + N2) ~ O(N)
 // Space Complexity - O(N) - to build space for A+A
 
 /* Example 1:
