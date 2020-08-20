@@ -1,3 +1,7 @@
+import java.util.*;
+
+// code to find the common characters and return the list.
+
 class Solution {
     public List<String> commonChars(String[] A) {
         
