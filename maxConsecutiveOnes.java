@@ -7,7 +7,8 @@ import java.util.*;
 
 class Main {
    public static int findMaxConsecutiveOnes(int[] nums) {
-     int max =0;
+      if(nums == null || nums.length ==0) return 0;
+      int max =0;
      int no_of_ones= 0;
     for(int i=0; i< nums.length; i++)
     {
