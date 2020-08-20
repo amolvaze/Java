@@ -30,7 +30,7 @@ class Main {
    
   // Now we get period('.') we need to replace it with empty string
   local_name = local_name.replaceAll("\\.", "");
-  // create result and add to the hashet to return
+  // create result and add to the hashset to return
   String  resultString = local_name + domain_name;
   unique_emails.add(resultString); 
    }
