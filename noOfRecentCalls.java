@@ -5,6 +5,11 @@ Input: inputs = ["RecentCounter","ping","ping","ping","ping"], inputs = [[],[1],
 Output: [null,1,2,3,3]
 */
 
+//Time Complexity: O(Q)O(Q), where QQ is the number of queries made.
+
+//Space Complexity: O(W)O(W), where W = 3000W
+// 3000 is the size of the window we should scan for recent calls. In this problem, the complexity can be considered O(1)O(1).
+
 class RecentCounter {
     
     Queue<Integer> queue;
