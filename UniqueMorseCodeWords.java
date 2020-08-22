@@ -2,6 +2,10 @@ import java.util.*;
 
 // code to return unique morse words
 
+//Time Complexity: O(S)O(S), where SS is the sum of the lengths of words in words. We iterate through each character of each word in words.
+
+//Space Complexity: O(S)O(S).
+
 /*
 Example:
 Input: words = ["gin", "zen", "gig", "msg"]
