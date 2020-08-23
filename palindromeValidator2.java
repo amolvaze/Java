@@ -34,7 +34,9 @@ class Main {
 
    }
 
-
+   // This helper fucntion is to check after deleting at most one character rest of the string is palindrome or not
+  // Same above logic is applicable.
+   
    public static boolean helper(String s, int i, int j)
    {
       int a_pointer = i;
