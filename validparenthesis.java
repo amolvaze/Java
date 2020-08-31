@@ -3,7 +3,7 @@
 import java.util.*;
 class Main {
    public static boolean isValid(String s) { 
-        if(s.length()==1) return false;
+         if(s.length()%2 != 0) return false;
         Stack<Character> stack = new Stack<>();
         int i=0;
         while(i<s.length())
