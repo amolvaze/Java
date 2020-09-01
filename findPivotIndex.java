@@ -35,7 +35,7 @@ class Main {
         for(int i=0; i< nums.length; i++)
         {
           if(i!=0)left_sum += nums[i-1];
-          if(total_sum-left_sum-nums[i] == left_sum)
+          if(total_sum-left_sum-nums[i] == left_sum) // we are substracting nums[i] because that is a pivot element.
            {
              return i;
            }
