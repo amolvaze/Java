@@ -14,11 +14,11 @@ public static boolean isLongPressedName(String name, String typed) {
 while( j < typed.length())
 {
  
- if( i < name.length() && name.charAt(i) == typed.charAt(j))
+ if( i < name.length() && name.charAt(i) == typed.charAt(j)) // we will go on till we end up finsihing the named string and both characters of both the strings are the same.
  {
    i++;
  }
- else if( j == 0 || typed.charAt(j) != typed.charAt(j-1))
+ else if( j == 0 || typed.charAt(j) != typed.charAt(j-1)) // check if first char of typed one is different or the chars before and after are not the same.
  {
    return false;
  }
