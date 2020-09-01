@@ -18,34 +18,34 @@
 
 // O(N)
 
-import java.util.*;
 
-class Solution {
-public static int pivotIndex(int[] nums) {
-          int sum_left=0, sum_right =0;
-          for(int i=0,j=0; ;j++) {
-               if (j == nums.length) {
-                  if (sum_left == sum_right)
-                   return i;
-                  else
-                  {
-                   sum_left = sum_right = j = 0;
-                   if (++i == nums.length)
-                     break;
-                  }
-               }
-               if(j < i)
-                 sum_left += nums[j];
-               else if(j > i)
-                 sum_right += nums[j];
-           } 
-           return -1;
-}
+import java.util.*;
+// Code to find the pivot index.
+
+class Main {
   
-public static void main(String[] args) {
+  public static int pivotIndex(int[] nums) {
+        int total_sum =0;
+        for(int i=0; i< nums.length; i++)
+        {
+          total_sum  += nums[i];
+        }
+
+        int left_sum =0;
+        for(int i=0; i< nums.length; i++)
+        {
+          if(i!=0)left_sum += nums[i-1];
+          if(total_sum-left_sum-nums[i] == left_sum)
+           {
+             return i;
+           }
+        }
+
+        return -1;
+    }
+
+  public static void main(String[] args) {
     int[] arr = {1,7,3,6,5,6};
     System.out.println(pivotIndex(arr));
-}
-  
-  
+  }
 }
