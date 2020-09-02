@@ -2,6 +2,11 @@ import java.util.*;
 
 // code to find the min abs difference.
 
+
+// code to find the min abs difference.
+
+// Time Complexity - O(n log n) and space complexity - O(1) - no extra space so constant time.
+
 class Main {
   public static List<List<Integer>> minimumAbsDifference(int[] arr) {
   
