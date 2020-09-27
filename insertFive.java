@@ -56,3 +56,6 @@ public class Test {
 	}
 
 }
+
+// Output shoud be 5268
+
