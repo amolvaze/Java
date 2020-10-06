@@ -11,7 +11,7 @@ class Main {
     String res = " ";
     while(index < s.length())
     {
-      char curr = s.charAt(index);
+      //char curr = s.charAt(index);
       if(Character.isDigit(curr))
       { 
         int num = 0;
