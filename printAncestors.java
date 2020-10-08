@@ -42,3 +42,13 @@ class Main {
    
   }
 }
+
+/* Construct the following binary tree  
+                1  
+                / \  
+            2     3  
+            / \  
+            4 5  
+            /  
+        7  
+        */
