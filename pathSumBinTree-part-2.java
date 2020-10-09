@@ -13,6 +13,8 @@
  *     }
  * }
  */
+
+// Time and Space Complexity - O(n)
 class Solution {
     int count =0;
     ArrayList<Integer> list = new ArrayList();
