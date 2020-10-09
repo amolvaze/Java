@@ -1,6 +1,6 @@
 // Dynamic Programming House Robber problem
 
-// Time & Space Complexity - O(n)
+// Time Complexity - O(n) and Space Complexity - O(n^2) due to dp array.
 
 import java.util.*;
 
