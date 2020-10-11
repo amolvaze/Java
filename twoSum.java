@@ -2,6 +2,8 @@ import java.util.*;
 
 // code for Two Sum using a hashmap in lienar time O(n) and space O(n)
 
+// This solution when input is unsorted.
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         int[] result = new int[2];
