@@ -25,3 +25,31 @@ class Solution {
         
     }
 }
+// ------------------------------------------------When input is sorted, below is the solution------------------------------------------
+
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        int[] result = new int[2];
+        int left =0, right = numbers.length-1;
+        while(left < right){
+            int l = numbers[left];
+            int r = numbers[right];
+            if(l+r == target){
+                result[0] = left + 1;
+                result[1] = right + 1;
+                break;
+            }
+            else if(l+r < target){
+                left++;
+            }
+            else{
+                right--;
+            }
+         }
+        
+        return result;
+    }
+}
+
+// Time Complexity - O(n)
+// Space Complexity - O(1)
