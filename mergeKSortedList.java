@@ -67,16 +67,19 @@ public ListNode mergeKLists(ListNode[] lists) {
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
         PriorityQueue<Integer> q = new PriorityQueue(); // min heap.
-        for(ListNode head: lists){
+       // logic to add elements to priority queue
+      for(ListNode head: lists){
             while(head != null) {
                 q.add(head.val);
                 head = head.next;
             }
         }
         
+      // logic to remove elements from the queue and then add to the dummy which is referene to the head node.
         ListNode dummy = new ListNode(-1);
         ListNode head = dummy;
         while(!q.isEmpty()){
@@ -87,6 +90,3 @@ class Solution {
         return dummy.next;
     }
 }
-
-
-
