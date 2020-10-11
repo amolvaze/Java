@@ -1,6 +1,8 @@
 import java.util.*;
 // code to return all nos disappeared in an array.
 
+// Time Complexity - O(n) and Space Complexity - O(1) - no extra space.
+
 // Input:
 // [4,3,2,7,8,2,3,1]
 
