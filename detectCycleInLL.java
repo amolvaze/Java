@@ -21,7 +21,8 @@ public class Solution {
         while(slow!=fast) 
         {
            
-        if(fast == null || fast.next == null){
+           // Following condition checks that we reached at the end of LL and never comes back which means that there is no cycle.
+            if(fast == null || fast.next == null){
             return false; } 
             
             slow = slow.next;
