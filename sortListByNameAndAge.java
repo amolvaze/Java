@@ -1,5 +1,4 @@
 import java.util.*;
-// POJO class
 class Person {
 
     String fname;
@@ -45,16 +44,20 @@ class Main {
     persons.add(new Person("varun", 12));
     persons.add(new Person("arun", 22));
 
-    Collections.sort(persons, new Comparator<Person>() {
+  Collections.sort(persons, new Comparator<Person>() {
 
-        public int compare(Person t, Person t1) {
-            int comp = t.getFname().compareTo(t1.getFname());
-            if (comp != 0) {    // names are different
-                return comp;
-            }
-            return t.getAge() - t1.getAge();
-        }
-    });
+   public int compare(Person t1, Person t2) {
+   int comp = t1.getFname().compareTo(t2.getFname());
+   if(comp!=0){
+     return comp;
+   } 
+  
+  return t1.getAge()-t2.getAge();
+
+   }
+
+  });
+
     System.out.println(persons+" ");
   }
 }
