@@ -17,6 +17,15 @@ class Main {
         set.add(sum_so_Far);
 
       }
+    // alternative way of writing above for loop block 	  
+    //  for(int i=0;i <A.length; i++){
+    //    sum_so_Far += A[i];
+    //    if(set.contains(sum_so_Far-sum)) {
+    //      return true;
+    //    }
+    //  }
+	  
+	  
       return false;
   }
 
