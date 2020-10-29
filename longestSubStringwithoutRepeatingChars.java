@@ -1,5 +1,5 @@
 import java.util.*;
-// Longest Substring Without Repeating Characters
+// Longest Substring Without Repeating Characters - using a sliding window approach and Set for unique chars
 // Time complexity - O(n) // interating thru while and if O(2n) ~ O(n) ?
 // Space complexity - O(1) //set?
 
