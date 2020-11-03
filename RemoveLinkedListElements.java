@@ -16,7 +16,7 @@
  
 class Solution {
     public ListNode removeElements(ListNode head, int val) {
-        
+        // This will take care of the case if the value to be removed happens to be the first node then we need to skip it.
         while(head!=null && head.val == val){
             head = head.next;
         }
