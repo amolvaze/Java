@@ -40,3 +40,30 @@ class Main {
     System.out.println(longestPalindrome(s));
   }
 }
+// Alternative solution as follows:-
+
+ public int longestPalindrome(String s) {
+        
+		//A palindrom can either have all even numbers of occurances of a character along with atmost one odd character.
+		//The above logic is been implemented.
+        int[] arr = new int[256];
+        for(int i=0;i<s.length();i++)
+            arr[s.charAt(i)]++;
+        
+        int count = 0;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]%2!=0)
+                count++;
+        }
+        
+		//If the count is 1 or less then the entire string can be a palindrom .
+        if(count<=1)
+            return s.length();
+        else   //else only one odd number character along with all number of occuring characters can be a palindrom
+            return (s.length()-count+1);
+			
+		// return count<=1? s.length():(s.length()-count+1);
+
+    }
+
