@@ -7,6 +7,16 @@ One longest palindrome that can be built is "dccaccd", whose length is 7.
 Letters are case sensitive, for example, "Aa" is not considered a palindrome here.
 */
 
+/* 
+
+Time Complexity: O(N)O(N), where NN is the length of s. We need to count each letter.
+
+Space Complexity: O(1)O(1), the space for our count, as the alphabet size of s is fixed. 
+
+We should also consider that in a bit complexity model, technically we need O(\log N)O(logN) bits to store the count values.
+
+*/
+
 class Main {
   public static int longestPalindrome(String s) {
    if(s.length() == 0 || s == null)
