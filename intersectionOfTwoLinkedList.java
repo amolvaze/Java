@@ -25,7 +25,7 @@ public class Solution {
             }
             
             
-            if(b_pointer != null) {
+            if(b_pointer == null) {
                 b_pointer = headA;
             }
             else {
