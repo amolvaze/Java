@@ -20,18 +20,40 @@
  
 // # What do you think is the right thing to do if k=0?
 
-// Time Complexity - O(n log k) 
 
-class Solution {
-   public List<String> topKFrequent(String[] words, int k) {
-        Map<String, Integer> count = new HashMap();
-        for (String word: words) {
-            count.put(word, count.getOrDefault(word, 0) + 1);
-        }
-        List<String> candidates = new ArrayList(count.keySet());
-        Collections.sort(candidates, (w1, w2) -> count.get(w1).equals(count.get(w2)) ?
-                w1.compareTo(w2) : count.get(w2) - count.get(w1));
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
-        return candidates.subList(0, k);
-}
+public class Solution {
+ public static List<String> topKWords(String[] words, int k){
+     // base case 
+     if(words.length == 0 || k == 0){
+         return Collections.emptyList();
+     }
+     if( k == words.length){
+        System.out.println("Limit exceeded! ");
+     }
+     
+     // map to keep track of no of words
+     HashMap<String, Integer> map = new HashMap<String, Integer>();
+     for(String word: words){
+       map.put(word, map.getOrDefault(word, 0) + 1);
+     }
+     
+ @SuppressWarnings("rawtypes")
+    List<String> topWords =  new ArrayList(map.keySet());
+    Collections.sort(topWords, (t1,t2) -> map.get(t1). equals(map.get(t2)) ? t1.compareTo(t2) : map.get(t2) - map.get(t1));
+      return topWords.subList(0, k);  
+ }
+
+ public static void main(String[] args) {
+    String input = "once thrice twice thrice twice thrice";
+    String[] words = input.split(" ");
+    int k = 4;
+    System.out.println(topKWords(words, k));
+        
+   }
 }
