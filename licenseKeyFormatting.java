@@ -5,6 +5,8 @@
 // Explanation: The string S has been split into two parts, each part has 4 characters.
 // Note that the two extra dashes are not needed and can be removed.
 
+// Time complexity - O(n)
+
 class Main {
    public static String licenseKeyFormatting(String S, int K) {
     
