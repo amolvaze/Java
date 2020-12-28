@@ -1,3 +1,11 @@
+// Example
+
+//Given a non-negative integer num represented as a string, remove k digits from the number so that the new number is the smallest possible.
+
+// Input: num = "1432219", k = 3
+// Output: "1219"
+// Explanation: Remove the three digits 4, 3, and 2 to form the new number 1219 which is the smallest.
+
 import java.util.Stack;
 
 // Time complexity - O(2n)
