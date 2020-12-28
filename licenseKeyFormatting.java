@@ -1,3 +1,10 @@
+// Input: S = "5F3Z-2e-9-w", K = 4
+
+// Output: "5F3Z-2E9W"
+
+// Explanation: The string S has been split into two parts, each part has 4 characters.
+// Note that the two extra dashes are not needed and can be removed.
+
 class Main {
    public static String licenseKeyFormatting(String S, int K) {
     
