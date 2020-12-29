@@ -13,6 +13,8 @@
  *     }
  * }
  */
+
+// BFS - level order traversal approach - Time Complexity and Space Complexity - O(n)
 class Solution {
     public int minDepth(TreeNode root) {
         if (root == null) return 0;
@@ -32,4 +34,13 @@ class Solution {
         }
         return depth;
         }
+}
+
+// Approach -2 - DFS recursive approach - Time Complexity- O(n) and Space Complexity - O(log n)
+
+public int minDepth(TreeNode root) {
+if (root == null) return 0;
+if (root.left == null) return minDepth(root.right) + 1;
+if (root.right == null) return minDepth(root.left) + 1;
+return Math.min(minDepth(root.left), minDepth(root.right)) + 1;
 }
