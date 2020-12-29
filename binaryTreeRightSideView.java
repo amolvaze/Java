@@ -12,6 +12,12 @@
  *         this.right = right;
  *     }
  * }
+ 
+ // Example
+ 
+ Input: [1,2,3,null,5,null,4]
+ Output: [1, 3, 4]
+
  */
 class Solution {
     public List<Integer> rightSideView(TreeNode root) {
