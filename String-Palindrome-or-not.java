@@ -32,3 +32,9 @@ class Main {
 
   }
 }
+
+// Javascript solution is working fine for all test cases of Leetcode
+var isPalindrome = function(s) {
+s = s.toLowerCase().replace(/[^a-z0-9]/g, "");
+return s.split("").reverse().join("") === s;
+};
