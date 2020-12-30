@@ -28,6 +28,12 @@ public class Solution extends VersionControl {
           return left;
         }
         
+          // Alternatively 
+        
+        // if(left == right && isBadVersion(right)){
+        //   return right;
+        // }
+        
         return -1;
     }
 }
