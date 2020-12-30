@@ -5,23 +5,25 @@ import java.util.*;
 class Main {
 
  // function to check string is palindrome or not
- public static boolean isPalindrome(String str) {
-     if(str == null || str.length() == 0) {
-         return false;
-     } 
-   
-     	for (int i = 0, j = str.length() - 1; i < j; ++i, --j) {
-            
-       if(str.charAt(i) != str.charAt(j)) {
-          return false;
+class Solution {
+       public boolean isPalindrome(String s) {
+       int left=0; int right=s.length()-1;
+       while(right>left){
+       while(right>left && !Character.isLetterOrDigit(s.charAt(left))){
+       left++;
        }
-
-     }
-
-         
-      return true;
- }
-
+       while(right>left && !Character.isLetterOrDigit(s.charAt(right))){
+       right--;
+       }
+       if(right>left && Character.toLowerCase(s.charAt(left))!=Character.toLowerCase(s.charAt(right))){
+       return false;
+       }
+       left++;
+       right--;
+       }
+       return true;
+       }
+}
 
   public static void main(String[] args) {
     //System.out.println("Hello world!");
