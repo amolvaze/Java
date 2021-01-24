@@ -26,7 +26,7 @@ class Solution {
              open++;
             }
             else if(c == ')') {
-             if(open == 0) continue;
+             if(open == 0) continue; // logic to handle close one before opening one - ) before (
              open--;
             }
             
