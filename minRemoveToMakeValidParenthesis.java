@@ -42,7 +42,7 @@ class Solution {
             result.append(sb.charAt(i));
         }
         
-        return result.reverse().toString();
+        return result.reverse().toString(); // we need to reverse as we are traversing backwards in the for loop.
         
     }
 }
