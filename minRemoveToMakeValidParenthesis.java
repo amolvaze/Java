@@ -33,6 +33,7 @@ class Solution {
             sb.append(c);
         }
         
+         // logic to handle this case - ()( - to remove extra ( after () valid pair.
         StringBuilder result = new StringBuilder();
         
         for(int i = sb.length()-1; i>=0; i--){
