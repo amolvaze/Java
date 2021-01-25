@@ -1,42 +1,29 @@
-// Linear time solution for the merge intervals
 class Solution {
     public int[][] merge(int[][] intervals) {
-        if(intervals.length == 0) return new int[0][0];
-        int min = Arrays.stream(intervals).min((a ,b) -> a[0] - b[0]).get()[0];
-        int max = Arrays.stream(intervals).max((a ,b) -> a[1] - b[1]).get()[1];
-
-        int range = max - min + 1;
-        int[] intrv = new int[range];
-        boolean[] same = new boolean[range];
-
-        for(int i = 0; i < intervals.length; i++) {
-            if(intervals[i][0] != intervals[i][1]){
-                intrv[intervals[i][0] - min]++;
-                intrv[intervals[i][1] - min]--;
-            }
-            else {
-                same[intervals[i][0] - min] = true;
-            }
+        if(intervals.length <=1){
+            return intervals;
         }
-
-        int[][] results = new int[intervals.length][2];
-        int counter = 0;
-        int currentSum = 0;
-        int start = 0;
-        for(int i = 0; i < range; i++) {
-            if(intrv[i] > 0) {
-                if(currentSum == 0) {
-                    start = i;
-                }
-            }
-            currentSum += intrv[i];
-            if(intrv[i] < 0 && currentSum == 0) {
-                results[counter++] = new int[]{start + min, i + min };
-            }
-            if(intrv[i] == 0 && same[i] && currentSum == 0) {
-                results[counter++] = new int[]{i + min, i + min };
-            }
+        Arrays.sort(intervals, (arr1,arr2) -> Integer.compare(arr1[0], arr2[0]));
+        
+        List<int[]> output_arr = new ArrayList();
+        int[] current_interval = intervals[0];
+        output_arr.add(current_interval);
+        
+        for(int[] interval : intervals){
+          int current_begin = current_interval[0];
+          int current_end = current_interval[1]; 
+          int next_begin = interval[0];
+          int next_end = interval[1];
+            
+          if(current_end >= next_begin){
+            current_interval[1] = Math.max(current_end,next_end);  
+          } else {
+             current_interval = interval;
+              output_arr.add(current_interval);
+          } 
+            
         }
-        return Arrays.copyOfRange(results, 0, counter);
+        
+      return output_arr.toArray(new int[output_arr.size()][]);
     }
 }
