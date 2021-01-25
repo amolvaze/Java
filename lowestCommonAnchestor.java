@@ -7,6 +7,11 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
+
+// Time complexity - O(n) 
+
+// Ref link --> https://www.programcreek.com/2014/07/leetcode-lowest-common-ancestor-of-a-binary-tree-java/
+
 class Solution {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
     if(root==null)
