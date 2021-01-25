@@ -13,6 +13,7 @@
 // Output: [[1,5]]
 // Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 
+// Time complexity - O(n log n) due to sorting.
 
 class Solution {
     public int[][] merge(int[][] intervals) {
