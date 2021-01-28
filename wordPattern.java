@@ -33,7 +33,7 @@ class Main {
      
      if(words.length != pattern.length()) return false;
 
-     for(int i=0; i< words.length; i++){
+     for(Integer i=0; i< words.length; i++){
        char c = pattern.charAt(i);
        String w = words[i];
        
