@@ -1,3 +1,5 @@
+// Due to sorting, Time Complexity - O(n log n)
+
 class Solution {
     public int findContentChildren(int[] g, int[] s) {
         if(s == null || s.length == 0 || g== null || g.length == 0) return 0;
