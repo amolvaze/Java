@@ -1,3 +1,5 @@
+// Sliding Window approach.
+
 public static void findLongestSubArrayBySum(int s, int[] arr){
  
  int[] result = new int[] {-1};
@@ -17,7 +19,7 @@ public static void findLongestSubArrayBySum(int s, int[] arr){
  right++;
  }
  for(int i=0; i< result.length; i++){
-  System.out.println(result[i]+" ");
+  System.out.println(result[i]+" "); // output should be 1, 8
  }
  }
 
