@@ -64,6 +64,24 @@ if(s.indexOf(s.charAt(i)) == s.lastIndexOf(s.charAt(i))){
 // }
 //  return -1;
 // }
+  
+  // Another approach using interget count array of 26 - so only that much of the space.
+  
+ public static char firstNonRepating2(String s) {
+  int[] char_counts = new int[26];
+   
+  // loop thru
+  for(char c: s.toCharArray() ) char_counts[c-'a']++;
+  
+  // Again loop thru  
+  for(char c: s.toCharArray()) 
+  {
+    if(char_counts[c-'a'] == 1) return c;
+  }
+   
+ return '_';
+}
+  
 
   public static void main(String[] args) {
     String s = "aaabccccdddf";
