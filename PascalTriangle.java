@@ -1,3 +1,6 @@
+// Time Complexity - O(numRows^2) 
+// Space Complexity  - O(numRows ^2)
+
 class Solution {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> triangle = new ArrayList();
@@ -10,8 +13,8 @@ class Solution {
         triangle.add(first_row);
         
         for(int i=1; i< numRows; i++){
-            List<Integer> prev_row = triangle.get(i-1);
-            List<Integer> row = new ArrayList<>();
+            List<Integer> prev_row = triangle.get(i-1); // prev row
+            List<Integer> row = new ArrayList<>(); // current row 
             row.add(1);
             
             for(int j= 1; j< i; j++ ){
