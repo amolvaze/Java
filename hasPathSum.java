@@ -1,4 +1,4 @@
-Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.
+//Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.
 
 /**
  * Definition for a binary tree node.
@@ -15,6 +15,13 @@ Given the root of a binary tree and an integer targetSum, return true if the tre
  *     }
  * }
  */
+
+// Input: root = [1,2,3], targetSum = 5
+// Output: false
+    
+// Input: root = [1,2], targetSum = 0
+// Output: false
+
 class Solution {
     public boolean hasPathSum(TreeNode root, int targetSum) {
         if(root == null) return false;
