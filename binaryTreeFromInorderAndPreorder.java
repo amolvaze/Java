@@ -13,6 +13,11 @@
  *     }
  * }
  */
+
+//Since in order to construct the entire tree, we end up visiting each node in both the arrays, so the time complexity is T O(n). 
+    
+//Space complexity due to the stack space incurred due to recursion would amount to S O(n).
+
 class Solution {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         
