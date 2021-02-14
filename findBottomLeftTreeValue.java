@@ -59,7 +59,7 @@ class Main {
         while(!queue.isEmpty()){
             int size=queue.size();
             for(int i=0;i<size;i++){
-                TreeNode current=queue.remove();
+                TreeNode current=queue.poll();
                 if(i==0){
                     leftminimum=current.val;
                 }
