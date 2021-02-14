@@ -33,3 +33,28 @@ class Solution {
       helper(root.right,depth+1,position*2+1); 
     }
 }
+
+// Alternative solution using queue - level order
+
+public int widthOfBinaryTree(TreeNode root) {
+        if(root == null) return 0;
+        
+        Queue<Pair<TreeNode, Integer>> queue = new LinkedList<>();
+        queue.offer(new Pair(root, 0));
+        int maxWidth = 0;
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            Pair<TreeNode, Integer> first = queue.peek();
+            Pair<TreeNode, Integer> curr = null;
+            while(size-- > 0){
+                curr = queue.poll();
+                TreeNode node = curr.getKey();
+                int index = curr.getValue();
+                if(node.left != null) queue.offer(new Pair(node.left, 2 * index));
+                if(node.right != null) queue.offer(new Pair(node.right, 2 * index + 1));
+            }
+            maxWidth = Math.max(maxWidth, curr.getValue() - first.getValue() + 1);
+        }
+        
+        return maxWidth;
+    }
