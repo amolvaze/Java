@@ -1,3 +1,7 @@
+// Time Complexity - O(C) - c- content of words 
+
+// Space Complexity - O(n) - due to new array
+
 class Solution {
    public int[] char_map;
     public boolean isAlienSorted(String[] words, String order) {
