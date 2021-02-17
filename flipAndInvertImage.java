@@ -11,31 +11,23 @@ To invert an image means that each 0 is replaced by 1, and each 1 is replaced by
 
 */
 
-class Main {
-   public static void flipAndInvertImage(int[][] A) {
-    for(int i=0; i< A.length; i++){
-      int low = 0;
-      int high = A[i].length-1;
-      while(low <=high){
-      if(A[i][low] == A[i][high]){
-       A[i][low] = 1- A[i][low];
-       A[i][low] = A[i][high];
-      }
-      low++;
-      high--;
-      }
+class Solution {
+    public int[][] flipAndInvertImage(int[][] A) {
+        
+        int low =0;
+        int high = A.length-1;
+        
+        while(low <= high){
+            for(int i=0; i < A.length; i++){
+            if(A[i][low] == A[i][high]){
+             A[i][low] = 1- A[i][low]; // trick to invert 0 to 1 and vice versa
+             A[i][high] = A[i][low]; // copy from low to high
+            }
+        } 
+            low++;
+            high--;
+        }
+       
+        return A;
     }
-  for (int i = 0; i<A.length; i++){
-     for (int j = 0; j<A[i].length; j++){
-      System.out.println(A[i][j]+" ");
-     }
-}
-
-   }
-  public static void main(String[] args) {
-    int[][] arr = {{1,1,0},{1,0,1},{0,0,0}};
-    
-    flipAndInvertImage(arr);
-    
-  }
 }
