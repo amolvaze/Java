@@ -32,36 +32,7 @@ class Main {
          max = Math.max(max, nums[i]);
        }
     }
-  
-    //------------------------n log n solution ---------------------------------------------------
-    
-    class Solution {
-    public int findUnsortedSubarray(int[] nums) {
-        int[] snums = nums.clone();
-        Arrays.sort(snums);
-        int start = snums.length, end = 0;
-        for (int i = 0; i < snums.length; i++) {
-            if (snums[i] != nums[i]) {
-                start = Math.min(start, i);
-                end = Math.max(end, i);
-            }
-        }
-        return (end - start >= 0 ? end - start + 1 : 0);
-    }
-}
-// Time complexity : O(n\log n)O(nlogn). Sorting takes n\log nnlogn time.
 
-// Space complexity : O(n)O(n). We are making copy of original array.
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
    int l =0, r = 0;
    for(int i=0; i< nums.length; i++)
    {
@@ -90,3 +61,25 @@ class Main {
     System.out.println(findUnsortedSubarray(arr));
   }
 }
+
+ //------------------------n log n solution ---------------------------------------------------
+
+// Time complexity : O(n\log n)O(nlogn). Sorting takes n\log nnlogn time.
+
+// Space complexity : O(n)O(n). We are making copy of original array.
+    
+    class Solution {
+    public int findUnsortedSubarray(int[] nums) {
+        int[] snums = nums.clone();
+        Arrays.sort(snums);
+        int start = snums.length, end = 0;
+        for (int i = 0; i < snums.length; i++) {
+            if (snums[i] != nums[i]) {
+                start = Math.min(start, i);
+                end = Math.max(end, i);
+            }
+        }
+        return (end - start >= 0 ? end - start + 1 : 0);
+    }
+}
+
