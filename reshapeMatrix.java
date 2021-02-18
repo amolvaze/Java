@@ -1,3 +1,25 @@
+// Input-1: 
+// nums = 
+// [[1,2],
+//  [3,4]]
+// r = 1, c = 4
+// Output: 
+// [[1,2,3,4]]
+// Explanation:
+
+// The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, fill it row by row by using the previous list.
+
+// Input-2: 
+// nums = 
+// [[1,2],
+//  [3,4]]
+// r = 2, c = 4
+// Output: 
+// [[1,2],
+//  [3,4]]
+// Explanation:
+// There is no way to reshape a 2 * 2 matrix to a 2 * 4 matrix. So output the original matrix.
+
 class Solution {
     public int[][] matrixReshape(int[][] nums, int r, int c) {
         
