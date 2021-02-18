@@ -1,0 +1,12 @@
+class Solution {
+    public int[] distributeCandies(int candies, int num_people) {
+        int[] result = new int[num_people];
+        for(int i=0; candies > 0; i++){
+            result[i % num_people] += Math.min(candies, i+1); 
+            // loops and reminders after the loop by using modulo 
+            candies -= i + 1;
+        }
+        
+        return result;
+    }
+}
