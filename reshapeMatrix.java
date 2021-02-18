@@ -20,6 +20,8 @@
 // Explanation:
 // There is no way to reshape a 2 * 2 matrix to a 2 * 4 matrix. So output the original matrix.
 
+// Time and Space Complexity - O( M * N)
+
 class Solution {
     public int[][] matrixReshape(int[][] nums, int r, int c) {
         
