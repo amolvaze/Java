@@ -6,13 +6,13 @@ class Solution {
         int rows = board.length;
         int cols = board[0].length;
         
-        // loop thru rows
+        // loop thru rows and with first and last columns
         for(int i=0; i< rows; i++){
             if(board[i][0] == 'O') boundryDFS(board, i, 0);
             if(board[i][cols-1] == 'O') boundryDFS(board, i, cols-1);
         }
         
-        // loop thru columns
+        // loop thru columns and with first and last rows
         
         for(int j=0; j < cols; j++){
           if(board[0][j] == 'O') boundryDFS(board, 0, j);
