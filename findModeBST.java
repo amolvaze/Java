@@ -51,9 +51,9 @@ class Solution {
            
          if(prev != null){
              if(prev == node.val){
-                 count++;
+                 count++; // if the nodes are duplicates then increament the count value.
              } else {
-                 count =1;
+                 count =1; // reset count value if node values are not duplicate 
              }
          }
         
