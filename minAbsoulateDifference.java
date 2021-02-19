@@ -36,3 +36,54 @@ class Main {
     System.out.println(minimumAbsDifference(arr));
   }
 }
+
+// ------------------------------------JavaScript Solution-------------------------------------------------------------------------------------
+
+/**
+ * @param {number[]} arr
+ * @return {number[][]}
+ */
+var minimumAbsDifference = function(arr) {
+    let minDifference = Infinity;
+    let output = [];
+    
+	// sort the array
+    arr.sort((a, b) => a - b);
+    
+	// find the min difference
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i + 1] - arr[i] < minDifference) {
+            minDifference = arr[i + 1] - arr[i];
+        }
+    }
+    
+	// check which pairs are in the min difference
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i + 1] - arr[i] === minDifference) {
+            output.push([arr[i], arr[i + 1]]);
+        }
+    }
+        
+    return output;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
