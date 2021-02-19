@@ -8,6 +8,8 @@
 
 // Return true if and only if the number of global inversions is equal to the number of local inversions.
 
+// All local inversions are global inversions but all global inversions are not local inversions.  Thus we are returning true if we get thru everything.
+
 // Example 1:
 
 // Input: A = [1,0,2]
