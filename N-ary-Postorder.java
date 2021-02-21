@@ -17,6 +17,8 @@ class Node {
 };
 */
 
+// Time Complexity - O(N)
+
 class Solution {
     public List<Integer> postorder(Node root) {
         
@@ -69,31 +71,4 @@ var postorder = function(root) {
     }
     return arr;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
