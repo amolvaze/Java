@@ -42,6 +42,56 @@ class Solution {
     }
 }
 
+// -------------------------------JavaScript Solution -------------------------------------------------------------------------
+
+/**
+ * // Definition for a Node.
+ * function Node(val,children) {
+ *    this.val = val;
+ *    this.children = children;
+ * };
+ */
+
+/**
+ * @param {Node} root
+ * @return {number[]}
+ */
+var postorder = function(root) {
+    let stack = [];
+    stack.push(root);
+    let arr = [];
+    while(stack.length>0){
+        let node = stack.pop();
+        if(node){
+            stack.push(...node.children);
+            arr.unshift(node.val);
+        }
+    }
+    return arr;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
