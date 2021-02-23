@@ -15,6 +15,7 @@
 // Output: 6
 // Explanation: B = [2,8]
 
+// Time Compelxity - O(N) and Space Complexity - O(1) - constant space. 
 
 class Solution {
     public int smallestRangeI(int[] A, int K) {
