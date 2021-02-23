@@ -12,6 +12,8 @@
 // Input: s = "axc", t = "ahbgdc"
 // Output: false
 
+// Two pointer Approach.
+
 // Time complexity - O(N) and Space Complexity - O(1) - constant space. 
 
 class Solution {
