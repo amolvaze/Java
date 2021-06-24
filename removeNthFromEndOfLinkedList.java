@@ -13,7 +13,7 @@ class Solution {
         
         // reference to the head ptr
         ListNode temp = new ListNode(0);
-        temp= head;
+        temp.next= head;
         
         ListNode slow = temp;
         ListNode fast= temp;
@@ -30,6 +30,6 @@ class Solution {
         
         slow.next = slow.next.next;
         
-        return temp;
+        return temp.next;
     }
 }
