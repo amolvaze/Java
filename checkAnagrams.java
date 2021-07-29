@@ -61,3 +61,45 @@ for(int j=0; j< range; j++){
   System.out.println(checkAnagramStrings(s1,s2));
   }
 }
+
+
+// JavaScript Logic
+
+const anagram = (s,t) => {
+
+ //const count RANGE = 256;
+let range = 256; 
+let n1= s.length
+console.log(n1)
+let n2=  t.length
+console.log(n2)
+if(n1 !== n2) return false;
+
+var counts = {};
+
+  for(let i = 0; i < n1; i++) {
+    let index = s.charCodeAt(i)-97;
+    counts[index] = (counts[index] || 0) + 1;
+  }
+
+  // console.log(counts)
+
+  for(let j = 0; j < n2; j++) {
+    let index = t.charCodeAt(j)-97;
+    if (!counts[index]) { 
+      return false; 
+    }
+    counts[index]--;
+  }
+
+  return true;
+ }
+
+
+
+
+
+
+
+
+
