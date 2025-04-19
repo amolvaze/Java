@@ -37,6 +37,30 @@ class Main {
   }
 }
 
+// Another Solution
+
+ public static int minimumAbsoluteDifference(List<Integer> arr) {
+    // Write your code here
+    Integer[] ar = arr.toArray(new Integer[0]);
+    
+    Arrays.sort(ar);
+    
+    int minAbsDifferene = Integer.MAX_VALUE;
+    
+    for(int i= 0; i <ar.length-1; i++){
+        int currentDiff = Math.abs(ar[i] - ar[i+1]);
+        minAbsDifferene  = Math.min(minAbsDifferene, currentDiff);
+        
+    }
+    
+    
+    return minAbsDifferene;
+
+    }
+
+}
+
+
 // ------------------------------------JavaScript Solution-------------------------------------------------------------------------------------
 
 /**
