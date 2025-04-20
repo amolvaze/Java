@@ -10,7 +10,7 @@
  * }
  */
 
-// same Hacker Rank problem- to fidn the merge point of two linked lists.
+// same Hacker Rank problem- to find the merge point of two linked lists.
 
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
